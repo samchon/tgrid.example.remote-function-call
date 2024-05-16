@@ -1,7 +1,5 @@
 import { Driver, WebSocketConnector } from "tgrid";
 
-import { ICalculator } from "./ICalculator";
-
 export const webSocketClientMain = async () => {
   const connector: WebSocketConnector<null, null, ICalculator> =
     new WebSocketConnector(
@@ -20,3 +18,10 @@ export const webSocketClientMain = async () => {
 
   await connector.close();
 };
+
+interface ICalculator {
+  plus(a: number, b: number): number;
+  minus(a: number, b: number): number;
+  multiply(a: number, b: number): number;
+  divide(a: number, b: number): number;
+}

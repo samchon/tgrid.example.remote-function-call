@@ -1,7 +1,5 @@
 import { WebSocketServer } from "tgrid";
 
-import { Calculator } from "./Calculator";
-
 export const webSocketServerMain = async () => {
   const server: WebSocketServer<
     null, // header
@@ -14,3 +12,18 @@ export const webSocketServerMain = async () => {
   });
   return server;
 };
+
+class Calculator {
+  public plus(x: number, y: number): number {
+    return x + y;
+  }
+  public minus(x: number, y: number): number {
+    return x - y;
+  }
+  public multiply(x: number, y: number): number {
+    return x * y;
+  }
+  public divide(x: number, y: number): number {
+    return x / y;
+  }
+}

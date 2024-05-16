@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "tgrid.example.websocket",
+  "name": "tgrid.example.remote-function-call",
   "version": "1.0.0",
-  "description": "TGrid WebSocket Example",
+  "description": "TGrid RFC (Remote Function Call) Example",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src"
