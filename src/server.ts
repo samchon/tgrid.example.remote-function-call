@@ -9,6 +9,7 @@ export const webSocketServerMain = async () => {
   await server.open(37_000, async (acceptor) => {
     const provider: Calculator = new Calculator();
     await acceptor.accept(provider);
+    acceptor.ping(15_000);
   });
   return server;
 };
